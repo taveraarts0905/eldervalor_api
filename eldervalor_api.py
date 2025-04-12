@@ -100,3 +100,8 @@ def validate_batch():
                 resumen["errores"].append(f"No hay imágenes en: {carpeta}")
 
     return JSONResponse(content=resumen)
+
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("eldervalor_api:app", host="0.0.0.0", port=10000, reload=False)
